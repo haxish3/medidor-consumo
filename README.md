@@ -55,5 +55,7 @@ O valor padrão atual é R$ 0,82 por kWh. Ajuste as duas constantes em
 
 ## Inicialização automática
 
-O agendador do Windows pode iniciar somente o monitor escondido ao entrar na
-conta. O dashboard continua abrindo manualmente pelo atalho quando você quiser.
+O agendador do Windows inicia somente o monitor escondido ao entrar na conta.
+Como a leitura de potência pode exigir privilégios de administrador, a tarefa
+`Medidor de Consumo` deve estar configurada com **Executar com privilégios mais
+altos**. O dashboard continua abrindo manualmente pelo atalho quando você quiser.
