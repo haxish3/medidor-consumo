@@ -3,10 +3,7 @@ $machinePath = [Environment]::GetEnvironmentVariable("Path", "Machine")
 $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
 $env:Path = "$machinePath;$userPath"
 
-$existingMonitor = Get-CimInstance Win32_Process | Where-Object {
-    $_.CommandLine -match [regex]::Escape($projectRoot) -and
-    $_.CommandLine -match "medidor-consumo"
-}
+$existingMonitor = Get-Process -Name "medidor-consumo" -ErrorAction SilentlyContinue
 
 if ($existingMonitor) {
     Write-Output "O monitor ja esta em execucao."
